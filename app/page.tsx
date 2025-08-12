@@ -10,9 +10,10 @@ import { Industries } from "@/components/Services/Industries";
 import { Services } from "@/components/Services/Services";
 import { ScrollProvider } from '@/contexts/ScrollContext';
 import { Testimonials } from '@/components/Testimonials/Testimonials';
-
-
-export default function Home() {
+import Home from "./Home/page";
+import Admin from "./Admin/page";
+import Upload from "./Upload/page";
+export default function page() {
   return (
     <ScrollProvider>
       <Hero/>
@@ -23,6 +24,9 @@ export default function Home() {
       <Industries/>
       <Testimonials/>
       <Contact/>
+      <Home/>
+      <Admin/>
+      <Upload/>
     </ScrollProvider>
   );
 }
