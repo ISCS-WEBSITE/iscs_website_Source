@@ -15,8 +15,11 @@ import {
 } from "@/components/ui/dialog";
 import { format, subMonths } from "date-fns";
 
+// Define row type for Excel JSON
+type AttendanceRow = Record<string, string | number | boolean>;
+
 export default function Page() {
-  const [data, setData] = useState<any[]>([]);
+  const [data, setData] = useState<(AttendanceRow | "placeholder")[]>([]);
   const [uploadedMonth, setUploadedMonth] = useState<string | null>(null);
   const [file, setFile] = useState<File | null>(null);
   const [isDialogOpen, setIsDialogOpen] = useState(false);
@@ -33,16 +36,18 @@ export default function Page() {
     if (!uploadedFile) return;
 
     setFile(uploadedFile);
-    setUploadedMonth(`${formattedMonth}`);
+    setUploadedMonth(formattedMonth);
     setUploadSuccess(false);
 
     const reader = new FileReader();
     reader.onload = (e) => {
       const binaryStr = e.target?.result;
+      if (!binaryStr) return;
+
       const workbook = XLSX.read(binaryStr, { type: "binary" });
       const sheetName = workbook.SheetNames[0];
       const sheet = workbook.Sheets[sheetName];
-      const jsonData = XLSX.utils.sheet_to_json(sheet);
+      const jsonData = XLSX.utils.sheet_to_json<AttendanceRow>(sheet);
 
       // Extract top 2, placeholder rows, and last 2
       const top2 = jsonData.slice(0, 2);
@@ -63,30 +68,24 @@ export default function Page() {
     formData.append("file", file);
 
     try {
-      // Use the correct endpoint as indicated by your curl command
       const response = await fetch("http://192.168.11.101:8080/upload/", {
         method: "POST",
         headers: {
           accept: "application/json",
-          // Content-Type is automatically set when using FormData
         },
         body: formData,
       });
 
       if (response.ok) {
         setUploadSuccess(true);
-        setTimeout(() => {
-          setIsDialogOpen(false);
-        }, 1500);
+        setTimeout(() => setIsDialogOpen(false), 1500);
       } else {
         const errorText = await response.text();
-        console.error("Upload failed:", response.status, errorText);
         setUploadError(
           `Upload failed (${response.status}): ${errorText || "Unknown error"}`
         );
       }
     } catch (error) {
-      console.error("Upload error:", error);
       setUploadError(
         `Connection error: ${
           error instanceof Error ? error.message : "Unknown error"
@@ -99,7 +98,7 @@ export default function Page() {
 
   return (
     <div className="h-screen flex justify-center items-center relative bg-green-50">
-      {/* Excel-style background with closer grid lines */}
+      {/* Excel-style background */}
       <div className="absolute inset-0 grid grid-cols-24 grid-rows-24 gap-0 opacity-40">
         {Array.from({ length: 576 }).map((_, index) => (
           <div key={index} className="border border-gray-300"></div>
@@ -134,30 +133,30 @@ export default function Page() {
               <table className="min-w-full border-collapse border border-gray-300 text-sm">
                 <thead>
                   <tr className="bg-gray-200">
-                    {Object.keys(data[0] !== "placeholder" ? data[0] : {}).map(
-                      (key) => (
+                    {typeof data[0] !== "string" &&
+                      Object.keys(data[0]).map((key) => (
                         <th
                           key={key}
                           className="border border-gray-400 px-2 py-1"
                         >
                           {key}
                         </th>
-                      )
-                    )}
+                      ))}
                   </tr>
                 </thead>
                 <tbody>
                   {data.map((row, index) =>
                     row === "placeholder" ? (
                       <tr key={index} className="bg-gray-50">
-                        {Object.keys(data[0]).map((_, i) => (
-                          <td
-                            key={i}
-                            className="border border-gray-400 px-2 py-1 text-center"
-                          >
-                            .. ... ..
-                          </td>
-                        ))}
+                        {typeof data[0] !== "string" &&
+                          Object.keys(data[0]).map((_, i) => (
+                            <td
+                              key={i}
+                              className="border border-gray-400 px-2 py-1 text-center"
+                            >
+                              .. ... ..
+                            </td>
+                          ))}
                       </tr>
                     ) : (
                       <tr key={index} className="even:bg-gray-100">
@@ -166,7 +165,7 @@ export default function Page() {
                             key={i}
                             className="border border-gray-400 px-2 py-1"
                           >
-                            {value as string}
+                            {String(value)}
                           </td>
                         ))}
                       </tr>
@@ -176,7 +175,6 @@ export default function Page() {
               </table>
             </div>
 
-            {/* Upload Button */}
             <Button
               onClick={() => setIsDialogOpen(true)}
               className="mt-4 bg-green-600 text-white hover:bg-green-700 transition duration-200"
@@ -187,7 +185,7 @@ export default function Page() {
         )}
       </Card>
 
-      {/* Fixed Confirmation Dialog with proper accessibility */}
+      {/* Confirmation Dialog */}
       <Dialog
         open={isDialogOpen}
         onOpenChange={(open) => !isUploading && setIsDialogOpen(open)}

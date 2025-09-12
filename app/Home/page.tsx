@@ -1,12 +1,12 @@
 "use client";
+import React, { useState, FormEvent } from "react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import React, { useState, FormEvent } from "react";
 
-export default function page() {
+export default function Page() {
   const [isLoading, setIsLoading] = useState(false);
   const [defaultValues, setDefaultValues] = useState({
     email: "",
@@ -57,6 +57,7 @@ export default function page() {
             </svg>
           </div>
         </div>
+
         {isLoading ? (
           <div className="flex justify-center items-center h-[450px]">
             <div className="animate-spin rounded-full border-t-4 border-[#00674A] border-solid h-16 w-16"></div>
@@ -67,7 +68,7 @@ export default function page() {
               <Label htmlFor="username">User Name</Label>
               <Input
                 id="username"
-                type="username"
+                type="text"
                 value={defaultValues.email}
                 onChange={(e) =>
                   setDefaultValues({ ...defaultValues, email: e.target.value })
@@ -105,17 +106,17 @@ export default function page() {
               >
                 Admin Login
               </a>
-             
             </div>
           </form>
         )}
       </div>
+
       <div className="w-2/3 relative">
         <Image
           src="/Attendance.webp"
           alt="Attendance"
-          layout="fill"
-          objectFit="cover"
+          fill
+          className="object-cover"
         />
       </div>
     </div>
