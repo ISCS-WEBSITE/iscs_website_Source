@@ -5,7 +5,7 @@ export const DATA = {
   projects: [
     {
       title: "G-Nayana - Healthcare.AI",
-      href: "https://ai-ra.vercel.app/",
+      href: "https://g-nayana.in/",
       dates: "Feb 2024 - Present",
       active: true,
       description:
@@ -23,7 +23,7 @@ export const DATA = {
       links: [
         {
           type: "Website",
-          href: "https://ai-ra.vercel.app/",
+          href: "https://g-nayana.in/",
           icon: <Icons.globe className="size-3" />,
         },
       ],

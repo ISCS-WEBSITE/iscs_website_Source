@@ -23,7 +23,7 @@ const BannerData = {
     
     "By streamlining the diagnostic workflow through automation and predictive analytics, we empower healthcare providers to enhance patient outcomes and reduce diabetes-related vision loss, ultimately improving the quality of life for diabetic patients."
   ],
-  link: "https://ai-ra.vercel.app/",
+  link: "https://g-nayana.in/",
 };
 
 const Banner1Data2 = {
@@ -39,7 +39,7 @@ const Banner1Data2 = {
     
     "By choosing Mi-Ware, enterprises gain the freedom to expand and adapt to evolving demands without incurring prohibitive costs, making it an ideal solution for companies seeking streamlined integration with a high return on investment."
   ],
-  link: "https://ai-ra.vercel.app/",
+  link: "https://g-nayana.in/",
 };
 
 const Banner1Data3 = {

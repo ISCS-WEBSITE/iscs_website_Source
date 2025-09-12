@@ -107,7 +107,7 @@ export function Footer() {
               <ul className="space-y-2 text-sm">
                 <li>
                   <Link
-                    href="https://ai-ra.vercel.app/"
+                    href="https://g-nayana.in/"
                     className="hover:text-blue-600 transition-colors"
                   >
                     G-Nayana - Healthcare.AI

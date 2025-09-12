@@ -308,7 +308,7 @@ const NavItem: React.FC<NavItemProps> = ({
                     <p className="text-sm text-gray-600">
                       Hybrid AI Approach: CNNs + Vision Transformers!
                     </p>
-                    <Link href="https://ai-ra.vercel.app/" passHref>
+                    <Link href="https://g-nayana.in/" passHref>
                       <Button variant="default" className="mt-4 w-full">
                         Learn More
                       </Button>
@@ -590,7 +590,7 @@ const Navigation: React.FC = () => {
               name: "Our Solution",
               description: "Early detection ",
               icon: "/assets/G-Nayana/solution.png",
-              href: "https://ai-ra.vercel.app/",
+              href: "https://g-nayana.in/",
             },
             {
               name: "Leveraging AI",
