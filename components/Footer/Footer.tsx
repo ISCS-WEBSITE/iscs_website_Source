@@ -109,6 +109,7 @@ export function Footer() {
                   <Link
                     href="https://g-nayana.in/"
                     className="hover:text-blue-600 transition-colors"
+                    target="_blank"
                   >
                     G-Nayana - Healthcare.AI
                   </Link>
