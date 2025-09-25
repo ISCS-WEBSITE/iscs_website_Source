@@ -184,8 +184,8 @@ export function Footer() {
         </div>
       </div>
 
-      <div className="bg-gray-900 text-gray-300">
-        <div className="container mx-auto px-4">
+      <div className="bg-gray-700 text-gray-300">
+        {/* <div className="container mx-auto px-4">
           <div className="pt-8 text-sm">
             <h3 className="text-lg font-semibold mb-6 text-white">
               Contact Us
@@ -252,7 +252,7 @@ export function Footer() {
                   </a>
                 </div>
               </div>
-              {/* Updated certifications section */}
+           
               <div className="w-full md:w-auto">
                 <div className="flex flex-col items-center md:items-end">
                   <span className="text-xs font-semibold mb-2">Certifications</span>
@@ -275,6 +275,12 @@ export function Footer() {
               reserved.
             </p>
           </div>
+        </div> */}
+        <div className="text-center py-8 text-xs">
+          <p>
+            &copy; {new Date().getFullYear()} ISCS Technologies. All rights
+            reserved.
+          </p>
         </div>
       </div>
     </footer>
