@@ -28,6 +28,7 @@ interface NavItemProps {
   hasThreeColumns?: boolean;
   description?: string;
   isResourceItem?: boolean;
+  openInNewTab?: boolean;
 }
 
 const NavItem: React.FC<NavItemProps> = ({
@@ -38,6 +39,7 @@ const NavItem: React.FC<NavItemProps> = ({
   hasTwoColumns,
   description,
   isResourceItem,
+  openInNewTab,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -149,7 +151,7 @@ const NavItem: React.FC<NavItemProps> = ({
                       <ul className="space-y-4">
                         {category.items.map((item) => (
                           <li key={item.name}>
-                            <Link href={item.href} passHref>
+                            <Link href={item.href} passHref target={openInNewTab ? "_blank" : undefined}>
                               <Button
                                 variant="ghost"
                                 className="w-full justify-start text-sm text-muted-foreground hover:text-primary"
@@ -195,7 +197,7 @@ const NavItem: React.FC<NavItemProps> = ({
                       <ul className="space-y-4">
                         {category.items.map((item) => (
                           <li key={item.name}>
-                            <Link href={item.href} passHref>
+                            <Link href={item.href} passHref target={openInNewTab ? "_blank" : undefined}>
                               <Button
                                 variant="ghost"
                                 className="w-full justify-start text-sm text-muted-foreground hover:text-primary"
@@ -263,7 +265,7 @@ const NavItem: React.FC<NavItemProps> = ({
                       <ul className="space-y-2">
                         {category.items.map((subItem) => (
                           <li key={subItem.name}>
-                            <Link href={subItem.href} passHref>
+                            <Link href={subItem.href} passHref target={openInNewTab ? "_blank" : undefined}>
                               <Button
                                 variant="ghost"
                                 className="w-full justify-start text-sm text-muted-foreground hover:text-primary"
@@ -308,7 +310,7 @@ const NavItem: React.FC<NavItemProps> = ({
                     <p className="text-sm text-gray-600">
                       Hybrid AI Approach: CNNs + Vision Transformers!
                     </p>
-                    <Link href="https://g-nayana.in/" passHref target="_blank">
+                    <Link href="https://g-nayana.in/" passHref target={openInNewTab ? "_blank" : undefined}>
                       <Button variant="default" className="mt-4 w-full">
                         Learn More
                       </Button>
@@ -337,6 +339,7 @@ const MobileNavItem: React.FC<MobileNavItemProps> = ({
   toggleDropdown,
   activeDropdown,
   isResourceItem,
+  openInNewTab,
 }) => {
   return (
     <div>
@@ -375,7 +378,7 @@ const MobileNavItem: React.FC<MobileNavItemProps> = ({
                 </h3>
               )}
               {category.items.map((item) => (
-                <Link key={item.name} href={item.href} passHref>
+                <Link key={item.name} href={item.href} passHref target={openInNewTab ? "_blank" : undefined}>
                   <Button
                     variant="ghost"
                     className="w-full justify-start text-sm text-muted-foreground hover:text-primary"
@@ -631,7 +634,7 @@ const Navigation: React.FC = () => {
               name: "Our Solution",
               description: "Streamlining data flow",
               icon: "/assets/Mi-Ware/Mi-Ware.png",
-              href: "/Products/#mi-ware",
+              href: "https://g-nayana.in/",
             },
             {
               name: "Low-Cost",
@@ -643,6 +646,7 @@ const Navigation: React.FC = () => {
         },
       ],
       hasFeatureCard: true,
+      openInNewTab: true,
     },
     {
       name: "Industries",
