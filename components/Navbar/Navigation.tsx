@@ -308,7 +308,7 @@ const NavItem: React.FC<NavItemProps> = ({
                     <p className="text-sm text-gray-600">
                       Hybrid AI Approach: CNNs + Vision Transformers!
                     </p>
-                    <Link href="https://g-nayana.in/" passHref>
+                    <Link href="https://g-nayana.in/" passHref target="_blank">
                       <Button variant="default" className="mt-4 w-full">
                         Learn More
                       </Button>
