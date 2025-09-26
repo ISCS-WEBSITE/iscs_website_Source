@@ -634,7 +634,7 @@ const Navigation: React.FC = () => {
               name: "Our Solution",
               description: "Streamlining data flow",
               icon: "/assets/Mi-Ware/Mi-Ware.png",
-              href: "https://g-nayana.in/",
+              href: "https://mi-ware.in/",
             },
             {
               name: "Low-Cost",
