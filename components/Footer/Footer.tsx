@@ -184,7 +184,7 @@ export function Footer() {
         </div>
       </div>
 
-      <div className="bg-gray-700 text-gray-300">
+      <div className="bg-white text-gray-800  border-gray-200">
         {/* <div className="container mx-auto px-4">
           <div className="pt-8 text-sm">
             <h3 className="text-lg font-semibold mb-6 text-white">
@@ -277,7 +277,7 @@ export function Footer() {
           </div>
         </div> */}
         <div className="text-center py-8 text-xs">
-          <p>
+          <p className="font-semibold">
             &copy; {new Date().getFullYear()} ISCS Technologies. All rights
             reserved.
           </p>
