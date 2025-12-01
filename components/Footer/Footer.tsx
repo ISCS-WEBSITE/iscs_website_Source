@@ -7,7 +7,7 @@ export function Footer() {
     <footer>
       <div className="bg-white text-gray-800 py-12 border-t border-gray-200">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
             <div className="col-span-1 md:col-span-2">
               <Link href="/" className="flex items-center mb-2">
                 <Image
@@ -180,11 +180,43 @@ export function Footer() {
                 </li>
               </ul>
             </div>
+
+            <div>
+              <h3 className="text-lg font-semibold mb-4 text-gray-900">
+                Legal
+              </h3>
+              <ul className="space-y-2 text-sm">
+                <li>
+                  <Link
+                    href="/legal/privacy-policy"
+                    className="hover:text-blue-600 transition-colors"
+                  >
+                    Privacy Policy
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/legal/terms-of-service"
+                    className="hover:text-blue-600 transition-colors"
+                  >
+                    Terms of Service
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/legal/cookie-policy"
+                    className="hover:text-blue-600 transition-colors"
+                  >
+                    Cookie Policy
+                  </Link>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
 
-      <div className="bg-gray-700 text-gray-300">
+      <div className="bg-white text-gray-800  border-gray-200">
         {/* <div className="container mx-auto px-4">
           <div className="pt-8 text-sm">
             <h3 className="text-lg font-semibold mb-6 text-white">
@@ -277,7 +309,7 @@ export function Footer() {
           </div>
         </div> */}
         <div className="text-center py-8 text-xs">
-          <p>
+          <p className="font-semibold">
             &copy; {new Date().getFullYear()} ISCS Technologies. All rights
             reserved.
           </p>
