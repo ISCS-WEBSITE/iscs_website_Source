@@ -1,7 +1,6 @@
 import { Icons } from "@/components/magicui/icons";
 
 export const DATA = {
-
   projects: [
     {
       title: "G-Nayana - Healthcare.AI",
@@ -10,7 +9,7 @@ export const DATA = {
       active: true,
       description:
         "At ISCS Technologies, we harness the power of Artificial Intelligence (AI) and Machine Learning (ML) to deliver innovative, data-driven solutions tailored to your business needs. ",
-        
+
       technologies: [
         "Convolutional Neural Networks (CNNs)",
         "Vision Transformers (ViTs)",
@@ -18,7 +17,6 @@ export const DATA = {
         "Medical Imaging Analysis",
         "Automated Image Analysis",
         "AI-based Diagnostic Tools",
-        
       ],
       links: [
         {
@@ -32,7 +30,7 @@ export const DATA = {
     },
     {
       title: "i-HRMS.AI",
-      href: "https://magicui.design",
+      href: "https://hrms-frontend-coral.vercel.app/",
       dates: "June 2023 - Present",
       active: true,
       description:
@@ -46,27 +44,26 @@ export const DATA = {
         "MongoDB",
         "Next.js",
         "AI-based Diagnostic Tools",
-        
       ],
       links: [
         {
           type: "Website",
-          href: "https://magicui.design",
-          icon: <Icons.globe className="size-3" />,
+          href: "https://hrms-frontend-coral.vercel.app/",
+          icon: <Icons.globe className="size-3"/>,
         },
-        
       ],
       image: "",
-      video: "https://pub-ccb175376fc94e64b1b2376fadf6c341.r2.dev/analytics-dashboard.mp4",
+      video:
+        "https://pub-ccb175376fc94e64b1b2376fadf6c341.r2.dev/analytics-dashboard.mp4",
     },
     {
       title: " LMS.AI",
-      href: "https://llm.report",
+      href: "/",
       dates: "April 2023 - September 2023",
       active: true,
       description:
         "At ISCS Technologies, we leverage AI and ML to build a personalized, data-driven E-Learning Platform that enhances learning experiences, automates content delivery, and tracks progress efficiently.",
-  
+
       technologies: [
         "Next.js",
         "Node.js",
@@ -76,22 +73,20 @@ export const DATA = {
         "AWS",
         "Flutter",
         "Stripe",
-        
       ],
       links: [
         {
           type: "Website",
-          href: "https://llm.report",
+          href: "/",
           icon: <Icons.globe className="size-3" />,
         },
-       
       ],
       image: "",
       video: "https://cdn.llm.report/openai-demo.mp4",
     },
     {
       title: "Mi-Ware - Integrations",
-      href: "https://automatic.chat",
+      href: "https://mi-ware.in/",
       dates: "April 2023 - Present",
       active: true,
       description:
@@ -110,14 +105,12 @@ export const DATA = {
       links: [
         {
           type: "Website",
-          href: "https://automatic.chat",
+          href: "https://mi-ware.in/",
           icon: <Icons.globe className="size-3" />,
         },
       ],
       image: "/assets/Mi-Ware/mimiware.png",
-      video:
-        "",
+      video: "",
     },
   ],
-  
 } as const;

@@ -38,15 +38,13 @@ export function ProjectCard({
   links,
   className,
 }: Props) {
-  const isG_Nayana = title === "G-Nayana - Healthcare.AI";
+  const hasLinks = links && links.length > 0;
 
   return (
     <Card className="flex flex-col overflow-hidden border hover:shadow-lg transition-all duration-300 ease-out h-full">
       <Link
-        href={isG_Nayana ? (href || "#") : "#"}
-        className={cn("block", className, {
-          "pointer-events-none": !isG_Nayana,
-        })}
+        href={href || "#"}
+        className={cn("block", className)}
       >
         {video && (
           <video
@@ -97,12 +95,10 @@ export function ProjectCard({
           <div className="flex flex-wrap gap-1">
             {links?.map((link, idx) => (
               <Link
-                href={isG_Nayana ? link?.href : "#"}
+                href={link?.href}
                 key={idx}
                 target="_blank"
-                className={cn("flex items-center gap-1 px-1.5 py-0.5 text-[10px]", {
-                  "opacity-50 pointer-events-none": !isG_Nayana,
-                })}
+                className="flex items-center gap-1 px-1.5 py-0.5 text-[10px]"
               >
                 <Badge className="flex items-center gap-1">
                   {link.icon}

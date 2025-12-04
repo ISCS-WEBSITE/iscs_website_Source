@@ -151,7 +151,11 @@ const NavItem: React.FC<NavItemProps> = ({
                       <ul className="space-y-4">
                         {category.items.map((item) => (
                           <li key={item.name}>
-                            <Link href={item.href} passHref target={openInNewTab ? "_blank" : undefined}>
+                            <Link
+                              href={item.href}
+                              passHref
+                              target={openInNewTab ? "_blank" : undefined}
+                            >
                               <Button
                                 variant="ghost"
                                 className="w-full justify-start text-sm text-muted-foreground hover:text-primary"
@@ -197,7 +201,11 @@ const NavItem: React.FC<NavItemProps> = ({
                       <ul className="space-y-4">
                         {category.items.map((item) => (
                           <li key={item.name}>
-                            <Link href={item.href} passHref target={openInNewTab ? "_blank" : undefined}>
+                            <Link
+                              href={item.href}
+                              passHref
+                              target={openInNewTab ? "_blank" : undefined}
+                            >
                               <Button
                                 variant="ghost"
                                 className="w-full justify-start text-sm text-muted-foreground hover:text-primary"
@@ -265,7 +273,11 @@ const NavItem: React.FC<NavItemProps> = ({
                       <ul className="space-y-2">
                         {category.items.map((subItem) => (
                           <li key={subItem.name}>
-                            <Link href={subItem.href} passHref target={openInNewTab ? "_blank" : undefined}>
+                            <Link
+                              href={subItem.href}
+                              passHref
+                              target={openInNewTab ? "_blank" : undefined}
+                            >
                               <Button
                                 variant="ghost"
                                 className="w-full justify-start text-sm text-muted-foreground hover:text-primary"
@@ -310,7 +322,11 @@ const NavItem: React.FC<NavItemProps> = ({
                     <p className="text-sm text-gray-600">
                       Hybrid AI Approach: CNNs + Vision Transformers!
                     </p>
-                    <Link href="https://g-nayana.in/" passHref target={openInNewTab ? "_blank" : undefined}>
+                    <Link
+                      href="https://g-nayana.in/"
+                      passHref
+                      target={openInNewTab ? "_blank" : undefined}
+                    >
                       <Button variant="default" className="mt-4 w-full">
                         Learn More
                       </Button>
@@ -378,7 +394,12 @@ const MobileNavItem: React.FC<MobileNavItemProps> = ({
                 </h3>
               )}
               {category.items.map((item) => (
-                <Link key={item.name} href={item.href} passHref target={openInNewTab ? "_blank" : undefined}>
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  passHref
+                  target={openInNewTab ? "_blank" : undefined}
+                >
                   <Button
                     variant="ghost"
                     className="w-full justify-start text-sm text-muted-foreground hover:text-primary"
@@ -599,7 +620,7 @@ const Navigation: React.FC = () => {
               name: "Glaucoma",
               description: "AI-powered solution",
               icon: "/assets/G-Nayana/ai.png",
-              href: "/Products#g-nayana",
+              href: "https://glaucoma-frontend.vercel.app/",
             },
           ],
         },
@@ -611,7 +632,7 @@ const Navigation: React.FC = () => {
               name: "i-HRMS",
               description: "Fast, scalable, and reliable",
               icon: "/assets/i-HRMS/i-HRMS.png",
-              href: "/Products#i-hrms",
+              href: "https://hrms-frontend-coral.vercel.app/",
             },
           ],
         },
@@ -748,7 +769,7 @@ const Navigation: React.FC = () => {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 transform ">
-        <div className="flex justify-between h-[70px]">
+        <div className="flex justify-between h-[80px]">
           <div className="flex items-center">
             <Link href="/" passHref>
               <Image
@@ -774,7 +795,7 @@ const Navigation: React.FC = () => {
                 Log In
               </Button>
             </Link> */}
-        
+
             <Link
               href="/Home"
               prefetch={false}
