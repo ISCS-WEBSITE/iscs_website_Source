@@ -298,11 +298,11 @@ const NavItem: React.FC<NavItemProps> = ({
                 {hasFeatureCard && (
                   <div className="bg-gray-50 p-4 rounded-lg">
                     <Image
-                      src="/assets/gradcam.jpg"
+                      src="/assets/G-nayana.jpg"
                       alt="Product feature"
                       width={180}
                       height={180}
-                      className="w-full h-auto mb-4"
+                      className="w-full h-auto mb-4 rounded-2xl"
                     />
                     <h3 className="text-lg font-semibold mb-2">
                       Featured Product
@@ -587,16 +587,16 @@ const Navigation: React.FC = () => {
       href: "/Products",
       dropdown: [
         {
-          category: "Diabetic Retinopathy Detection G-Nayana ",
+          category: "G-Nayana ",
           items: [
             {
-              name: "Our Solution",
+              name: "Diabetic Retinopathy",
               description: "Early detection ",
               icon: "/assets/G-Nayana/solution.png",
               href: "https://g-nayana.in/",
             },
             {
-              name: "Leveraging AI",
+              name: "Glaucoma",
               description: "AI-powered solution",
               icon: "/assets/G-Nayana/ai.png",
               href: "/Products#g-nayana",
