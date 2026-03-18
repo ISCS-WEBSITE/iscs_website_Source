@@ -47,7 +47,7 @@ const Banner1Data3 = {
   title: "i-HRMS: Automated Human Resource Management Solution ",
   subtitle:
     "i-HRMS is a home-grown application developed by the ISCS tech team to streamline human resource management activities within organizations. Designed to automate critical HR functions, it efficiently handles tasks such as administration, recruitment, attendance management, and leave management. By minimizing reliance on manual processes, i-HRMS empowers HR teams to focus on more strategic initiatives while ensuring that essential operations run smoothly.",
-  link: "#",
+  link: "https://iscstech.co.in/",
 };
 
 const Banner1Data4 = {

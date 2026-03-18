@@ -30,7 +30,7 @@ export const DATA = {
     },
     {
       title: "i-HRMS.AI",
-      href: "https://hrms-frontend-coral.vercel.app/",
+      href: "https://iscstech.co.in/",
       dates: "June 2023 - Present",
       active: true,
       description:
@@ -48,8 +48,8 @@ export const DATA = {
       links: [
         {
           type: "Website",
-          href: "https://hrms-frontend-coral.vercel.app/",
-          icon: <Icons.globe className="size-3"/>,
+          href: "https://iscstech.co.in/",
+          icon: <Icons.globe className="size-3" />,
         },
       ],
       image: "",

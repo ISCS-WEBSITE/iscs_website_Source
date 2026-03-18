@@ -13,11 +13,13 @@ interface Banner1Props {
   title: string;
   subtitle: string | string[]; // Accept either a single string or array of strings
   tag: string;
+  link?: string;
   reverse?: boolean;
 }
 
 const Banner1: React.FC<Banner1Props> = ({
   image,
+  link,
   title,
   subtitle,
   tag,
@@ -94,7 +96,18 @@ const Banner1: React.FC<Banner1Props> = ({
                 initial="hidden"
                 whileInView="visible"
                 className="pt-4"
-              ></motion.div>
+              >
+                {link && (
+                  <a
+                    href={link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block px-6 py-3 bg-orange-600 hover:bg-orange-700 text-white rounded-lg transition-colors font-medium"
+                  >
+                    Know More
+                  </a>
+                )}
+              </motion.div>
             </div>
           </div>
         </div>

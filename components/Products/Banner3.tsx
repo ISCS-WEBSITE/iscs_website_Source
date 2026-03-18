@@ -85,8 +85,8 @@ const Banner: React.FC<BannerProps> = ({ image, title, subtitle, link , tag, rev
                 className="pt-4"
               >
                 <Button className="px-6 py-3 bg-orange-600 hover:bg-orange-700 text-white rounded-lg transition-colors">
-                  {link ? <a href={link}>Know More</a> : "Get Started"}
-                </Button> 
+                  {link ? <a href={"https://iscstech.co.in/"} target="_blank" rel="noopener noreferrer">Know More</a> : "Get Started"}
+                </Button>
               </motion.div>
             </div>
           </div>
