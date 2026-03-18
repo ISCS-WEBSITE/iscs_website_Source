@@ -3,14 +3,14 @@
 @tailwind utilities;
 
 @font-face {
-	font-family: Linear;
-	font-weight: 400 800;
+	font-family: 'Inter';
+	font-weight: 100 900;
 	font-display: block;
 	src: url('/static/fonts/inter-var-4-latin.woff2') format('woff2');
 }
 
 body {
-  font-family: var(--regular-font);
+  font-family: 'Inter', var(--font-inter), system-ui, -apple-system, sans-serif;
   background: var(--color-bg-primary);
 }
 
@@ -167,18 +167,18 @@ body {
     --cursor-disabled: not-allowed;
     --cursor-tooltip: help;
     --font-size-micro: 0.6875rem;
-    --font-size-microPlus: 0.6875rem;
-    --font-size-mini: 0.75rem;
-    --font-size-miniPlus: 0.75rem;
-    --font-size-small: 0.8125rem;
-    --font-size-smallPlus: 0.8125rem;
-    --font-size-regular: 0.9375rem;
-    --font-size-regularPlus: 0.9375rem;
-    --font-size-large: 1.125rem;
-    --font-size-largePlus: 1.125rem;
-    --font-size-title1: 2.25rem;
-    --font-size-title2: 1.5rem;
-    --font-size-title3: 1.25rem;
+    --font-size-microPlus: 0.75rem;
+    --font-size-mini: 0.8125rem;
+    --font-size-miniPlus: 0.875rem;
+    --font-size-small: 0.9375rem;
+    --font-size-smallPlus: 1rem;
+    --font-size-regular: 1rem;
+    --font-size-regularPlus: 1.125rem;
+    --font-size-large: 1.25rem;
+    --font-size-largePlus: 1.5rem;
+    --font-size-title1: 2.5rem;
+    --font-size-title2: 2rem;
+    --font-size-title3: 1.5rem;
   }
 
   .dark {

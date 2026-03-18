@@ -26,6 +26,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ["var(--font-inter)", "Inter", "system-ui", "sans-serif"],
+      },
       
       colors: {
         lightblue: '#0066CC', 
@@ -134,26 +137,26 @@ const config: Config = {
       lg: '1200px',
     },
     fontSize: {
+      // Modern typography scale for Inter font
+      'xs': ['0.75rem', { lineHeight: '1rem', letterSpacing: '0.025em' }],      // 12px
+      'sm': ['0.875rem', { lineHeight: '1.25rem', letterSpacing: '0.016em' }],  // 14px
+      'base': ['1rem', { lineHeight: '1.5rem', letterSpacing: '0' }],           // 16px
+      'lg': ['1.125rem', { lineHeight: '1.75rem', letterSpacing: '-0.011em' }], // 18px
+      'xl': ['1.25rem', { lineHeight: '1.75rem', letterSpacing: '-0.016em' }],  // 20px
+      '2xl': ['1.5rem', { lineHeight: '2rem', letterSpacing: '-0.021em' }],     // 24px
+      '3xl': ['1.875rem', { lineHeight: '2.25rem', letterSpacing: '-0.026em' }],// 30px
+      '4xl': ['2.25rem', { lineHeight: '2.5rem', letterSpacing: '-0.031em' }],  // 36px
+      '5xl': ['3rem', { lineHeight: '1', letterSpacing: '-0.036em' }],          // 48px
+      '6xl': ['3.75rem', { lineHeight: '1', letterSpacing: '-0.042em' }],       // 60px
+      '7xl': ['4.5rem', { lineHeight: '1', letterSpacing: '-0.047em' }],        // 72px
+      '8xl': ['6rem', { lineHeight: '1', letterSpacing: '-0.053em' }],          // 96px
+      '9xl': ['8rem', { lineHeight: '1', letterSpacing: '-0.058em' }],          // 128px
+      
       // Custom extra-small sizes
-      'xxxxxs': '0.375rem',  // 6px
-      'xxxxs': '0.4375rem',  // 7px
-      'xxxs': '0.5rem',      // 8px
-      'xxs': '0.625rem',     // 10px
-
-      // Tailwind default sizes
-      'xs': '0.75rem',       // 12px
-      'sm': '0.875rem',      // 14px
-      'base': '1rem',        // 16px
-      'lg': '1.125rem',      // 18px
-      'xl': '1.25rem',       // 20px
-      '2xl': '1.5rem',       // 24px
-      '3xl': '1.875rem',     // 30px
-      '4xl': '2.25rem',      // 36px
-      '5xl': '3rem',         // 48px
-      '6xl': '3.75rem',      // 60px
-      '7xl': '4.5rem',       // 72px
-      '8xl': '6rem',         // 96px
-      '9xl': '8rem',         // 128px
+      'xxxxxs': ['0.375rem', { lineHeight: '0.5rem' }],  // 6px
+      'xxxxs': ['0.4375rem', { lineHeight: '0.625rem' }],  // 7px
+      'xxxs': ['0.5rem', { lineHeight: '0.75rem' }],      // 8px
+      'xxs': ['0.625rem', { lineHeight: '0.875rem' }],     // 10px
     },
     container: {
       center: true,
