@@ -42,12 +42,7 @@ export function ProjectCard({
 
   return (
     <Card className="flex flex-col overflow-hidden border hover:shadow-lg transition-all duration-300 ease-out h-full">
-      <Link
-        href={href || "#"}
-        className={cn("block", className)}
-        href={href || "#"}
-        className={cn("block", className)}
-      >
+      <Link href={href || "#"} className={cn("block", className)}>
         {video && (
           <video
             src={video}
@@ -85,7 +80,11 @@ export function ProjectCard({
         {tags && tags.length > 0 && (
           <div className="flex flex-wrap gap-1">
             {tags?.map((tag) => (
-              <Badge className="px-1 py-0 text-[10px]" variant="secondary" key={tag}>
+              <Badge
+                className="px-1 py-0 text-[10px]"
+                variant="secondary"
+                key={tag}
+              >
                 {tag}
               </Badge>
             ))}
@@ -97,13 +96,13 @@ export function ProjectCard({
           <div className="flex flex-wrap gap-1">
             {links?.map((link, idx) => (
               <Link
-                href={link?.href}
                 href={link?.href || "#"}
                 key={idx}
                 target="_blank"
-                className="flex items-center gap-1 px-1.5 py-0.5 text-[10px]"
                 rel="noopener noreferrer"
-                className={cn("flex items-center gap-1 px-1.5 py-0.5 text-[10px]")}
+                className={cn(
+                  "flex items-center gap-1 px-1.5 py-0.5 text-[10px]",
+                )}
               >
                 <Badge className="flex items-center gap-1">
                   {link.icon}
