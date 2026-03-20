@@ -84,9 +84,11 @@ const Banner: React.FC<BannerProps> = ({ image, title, subtitle, link , tag, rev
                 whileInView="visible"
                 className="pt-4"
               >
-                <Button className="px-6 py-3 bg-orange-600 hover:bg-orange-700 text-white rounded-lg transition-colors">
-                  {link ? <a href={"https://iscstech.co.in/"} target="_blank" rel="noopener noreferrer">Know More</a> : "Get Started"}
-                </Button>
+                {link && (
+                  <Button className="px-6 py-3 bg-orange-600 hover:bg-orange-700 text-white rounded-lg transition-colors">
+                    <a href={link} target="_blank" rel="noopener noreferrer">Know More</a>
+                  </Button>
+                )}
               </motion.div>
             </div>
           </div>

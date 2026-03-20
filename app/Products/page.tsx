@@ -30,15 +30,15 @@ const Banner1Data2 = {
   tag: "Mi-Ware",
   title: "Cost-Effective Middleware Integration Solution for Enterprises",
   subtitle: [
-    "In today’s digital world, enterprise systems are built on a wide variety of applications that require seamless data integration for efficient operations. However, traditional middleware solutions are often costly, rigid, and complex, making integration challenging for businesses aiming to balance cost with performance.",
+    "In today's digital world, enterprise systems are built on a wide variety of applications that require seamless data integration for efficient operations. However, traditional middleware solutions are often costly, rigid, and complex, making integration challenging for businesses aiming to balance cost with performance.",
 
     "Mi-Ware by ISCS Technologies provides an affordable, flexible solution for middleware integration, designed to empower enterprises of all sizes. Built on a Python-based platform, Mi-Ware enables robust connectivity between diverse software systems, simplifying data management and enhancing operational efficiency without the heavy licensing fees typical of other middleware tools.",
 
-    "Our solution combines cost-effectiveness, flexibility, and scalability with the power of open-source technology, enabling businesses to focus on growth and innovation rather than integration challenges. Mi-Ware’s Python foundation also allows for faster implementation and greater customizability, ensuring that each business can tailor the system to meet unique requirements.",
+    "Our solution combines cost-effectiveness, flexibility, and scalability with the power of open-source technology, enabling businesses to focus on growth and innovation rather than integration challenges. Mi-Ware's Python foundation also allows for faster implementation and greater customizability, ensuring that each business can tailor the system to meet unique requirements.",
 
     "By choosing Mi-Ware, enterprises gain the freedom to expand and adapt to evolving demands without incurring prohibitive costs, making it an ideal solution for companies seeking streamlined integration with a high return on investment.",
   ],
-  link: "https://g-nayana.in/",
+  link: "https://mi-ware.in/",
 };
 
 const Banner1Data3 = {
