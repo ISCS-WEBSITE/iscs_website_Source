@@ -11,23 +11,38 @@ import "slick-carousel/slick/slick-theme.css";
 interface Banner1Props {
   image: StaticImageData;
   title: string;
-  subtitle: string | string[];  // Accept either a single string or array of strings
+  subtitle: string | string[]; // Accept either a single string or array of strings
   tag: string;
+  link?: string;
   reverse?: boolean;
 }
 
-const Banner1: React.FC<Banner1Props> = ({ image, title, subtitle , tag, reverse }) => {
+const Banner1: React.FC<Banner1Props> = ({
+  image,
+  link,
+  title,
+  subtitle,
+  tag,
+  reverse,
+}) => {
   // Convert subtitle to array if it's a single string
   const paragraphs = Array.isArray(subtitle) ? subtitle : [subtitle];
 
   return (
     <div className="pb-14">
-      <div className="relative min-h-screen w-full bg-cover bg-center bg-no-repeat" style={{
-        backgroundImage: "url('/background-1.png')"
-      }}>
+      <div
+        className="relative min-h-screen w-full bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: "url('/background-1.png')",
+        }}
+      >
         <div className="container pt-20">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
-            <div className={`flex justify-start items-center ${reverse ? "md:order-last md:justify-end" : ""}`}>
+            <div
+              className={`flex justify-start items-center ${
+                reverse ? "md:order-last md:justify-end" : ""
+              }`}
+            >
               <motion.div
                 initial={{ opacity: 0, scale: 0.5 }}
                 whileInView={{ opacity: 1, scale: 1 }}
@@ -42,7 +57,7 @@ const Banner1: React.FC<Banner1Props> = ({ image, title, subtitle , tag, reverse
                 />
               </motion.div>
             </div>
-            
+
             <div className="flex flex-col justify-center space-y-6 lg:max-w-[600px]">
               <motion.p
                 variants={SlideUp(0.5)}
@@ -52,7 +67,7 @@ const Banner1: React.FC<Banner1Props> = ({ image, title, subtitle , tag, reverse
               >
                 {tag}
               </motion.p>
-              
+
               <motion.h2
                 variants={SlideUp(0.7)}
                 initial="hidden"
@@ -61,7 +76,7 @@ const Banner1: React.FC<Banner1Props> = ({ image, title, subtitle , tag, reverse
               >
                 {title}
               </motion.h2>
-              
+
               <div className="space-y-4">
                 {paragraphs.map((paragraph, index) => (
                   <motion.p
@@ -75,14 +90,23 @@ const Banner1: React.FC<Banner1Props> = ({ image, title, subtitle , tag, reverse
                   </motion.p>
                 ))}
               </div>
-              
+
               <motion.div
                 variants={SlideUp(1.1)}
                 initial="hidden"
                 whileInView="visible"
                 className="pt-4"
               >
-                
+                {link && (
+                  <a
+                    href={link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block px-6 py-3 bg-orange-600 hover:bg-orange-700 text-white rounded-lg transition-colors font-medium"
+                  >
+                    Know More
+                  </a>
+                )}
               </motion.div>
             </div>
           </div>
