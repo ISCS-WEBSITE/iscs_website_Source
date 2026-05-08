@@ -632,7 +632,7 @@ const Navigation: React.FC = () => {
               name: "i-HRMS",
               description: "Fast, scalable, and reliable",
               icon: "/assets/i-HRMS/i-HRMS.png",
-              href: "https://hrms-frontend-coral.vercel.app/",
+              href: "https://www.iscstech.co.in/",
             },
           ],
         },
